@@ -135,24 +135,25 @@ while 1:
 						right, left = 0, 1
 
 			if event.type == pg.KEYUP:
+				print(event.key)
 				if event.key == pg.K_RIGHT or event.key == pg.K_LEFT:
 					right, left = 0, 0
 				if event.key == pg.K_SPACE:
 					space = 1
 				if space == 0:
-					if event.key == pg.K_1:
+					if event.key == 257:
 						name = interface()
 						h_score = usrs_hsc[name]
 						color_ball, color_bar = colors['white'],colors['white']
-					if event.key == pg.K_2:
+					if event.key == 258:
 						if sure() == 1:
 							del usrs_hsc[name]
 							name = interface()
 							h_score = usrs_hsc[name]
 							color_ball, color_bar = colors['white'],colors['white']
-					if event.key == pg.K_3:
+					if event.key == 259:
 						color_ball = colors[str(colour())]
-					if event.key == pg.K_4:
+					if event.key == 260:
 						color_bar = colors[str(colour())]
 
 			if event.type == pg.QUIT:
