@@ -135,7 +135,6 @@ while 1:
 						right, left = 0, 1
 
 			if event.type == pg.KEYUP:
-				print(event.key)
 				if event.key == pg.K_RIGHT or event.key == pg.K_LEFT:
 					right, left = 0, 0
 				if event.key == pg.K_SPACE:
